@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { insertCampaignSchema } from "../../../../shared/schema";
+import { insertCampaignSchema } from "../../../shared/schema";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "../ui/dialog";
 import { Switch } from "../ui/switch";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
@@ -14,7 +14,7 @@ import { ArrowLeft, ChevronRight, Pencil, Play, X } from "lucide-react";
 import { useToast } from "../../hooks/use-toast";
 import { apiRequest, queryClient } from "../../lib/queryClient";
 import { Avatar } from "../ui/avatar";
-import type { Campaign } from "../../../../shared/schema";
+import type { Campaign } from "../../../shared/schema";
 
 // Extend the schema with validation
 const formSchema = insertCampaignSchema.extend({
